@@ -1,0 +1,124 @@
+/* General Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.1)), url('../img/bg1.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Navbar Styling */
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+nav .logo {
+  font-family: 'Pacifico', cursive;
+  color: #00b894;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #57deb8;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+nav:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar a:hover {
+  color: #00b894;
+  background-color: rgba(255, 255, 255, 0.3); /* Optional: Change background on hover */
+}
+
+/* Main Content Styling */
+main {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+section h1 {
+  word-spacing: 120%;
+  color: #3bf0cc98;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* Button Styling */
+.btnone input[type=submit], .btntwo input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btnone input[type=submit] {
+  background: #60adde;
+  color: #fff;
+}
+
+.btntwo input[type=submit] {
+  background: #60adde;
+  color: white;
+}
+
+.btnone:hover input[type=submit] {
+  background-color: #66ffd9;
+  color: black;
+}
+
+.btntwo:hover input[type=submit] {
+  background-color: white;
+  color: black;
+}
+
+/* Text Animation */
+.change_content::after {
+  content: "For BOOKS";
+  animation: changetext 5s infinite linear;
+}
+
+@keyframes changetext {
+  0% { content: "For KNOWLEDGE"; }
+  20% { content: "To LEARN"; }
+  40% { content: "For ADVENTURE"; }
+  55% { content: "To EXPLORE"; }
+  100% { content: "For BOOKS"; }
+}

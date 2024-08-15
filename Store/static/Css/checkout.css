@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    width: 100%; 
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    color: #00b894;
+    font-family: 'Pacifico', cursive;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #00b894;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.menu a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.1)), url('../img/bg1.jpg') no-repeat center center/cover;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    color: #00b894;
+    margin-bottom: 20px;
+}
+
+.order-summary, .payment-form {
+    margin-bottom: 30px;
+}
+
+.order-summary h3, .payment-form h3 {
+    margin-bottom: 10px;
+}
+
+.order-item, .order-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.order-total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.payment-form form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.payment-form form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00b894;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.payment-form form button:hover {
+    background-color: #57deb8;
+    transition: 0.3s;
+}

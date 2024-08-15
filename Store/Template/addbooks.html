@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" type="text/css" href="/static/Css/addbooks.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+        <h1>Add a New Book</h1>
+        <form  action="{% url 'addbooks' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="container">  
+                
+                <input type="text" id="title" name="title" placeholder="Enter book title" required>
+                <input type="text" id="author" name="author" placeholder="Enter author's name" required>
+                <input type="number" id="price" name="price" placeholder="Enter price" required>
+                <input type="file" id="image" name="image" accept="image/*" required>
+
+                <input type="submit" value="Add Book">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head><title>LOGIN</title>
+<link rel="stylesheet"  href="/static/Css/Login.css">
+</head>
+<body>
+	
+	{% if messages %}
+	<div class="alert-container">
+		{% for message in messages %}
+			<div class="alert alert-{{ message.tags }}">
+				{{ message }}
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}
+
+	    
+	<div class = "container ">
+	<div class="header">
+		<strong>Sorry you were logged out! </strong>
+		<form action="{% url 'home' %}" method="post"> 
+			<input type="submit" name="Submit" > <a href="{% url 'home' %}">Go To Home</a>
+		</form>
+	</div>
+	</div>
+</body>

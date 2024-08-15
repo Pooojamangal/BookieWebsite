@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><title>AUTHENTICATION</title>
+	<meta char="UTF-8">
+<link rel="stylesheet" type="text/css" href="/static/Css/Joinus.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<form action="{% url 'joinus' %}" method="post"> 
+	{% csrf_token %}
+<header> 
+	<nav>
+		<div class="logo"><h1 class="animated infinite bounce tada">Let's Get You Started!! Welcome</h1></div> 
+		<div>
+			<div class="navbar">
+			<a href="{% url 'home' %}" > HOME </a>
+			<a href="{% url 'books' %}" >BOOKS</a>
+			<a href="{% url 'cart' %}" >CART</a>
+			<a href="{% url 'order' %}" >ORDER</a>
+			<a href="{% url 'joinus' %}">JOINUS</a>
+  	<!--target="_blank" -->
+			</div>
+		</div>
+   </nav>
+
+   		<main>
+			<div class = "container1">
+        			<section >
+							<div>
+								<h2>
+									We’re thrilled to have you here! Whether you’re an avid reader, a book collector,<br>
+									or someone looking to discover the latest literary gems, you’ve come to the right place. <br>
+									By joining us, you’ll gain access to a world of books, exclusive deals, <br>
+									and a vibrant community of fellow book lovers. <br>
+								</h2>
+							</div>
+							<br><br><br><br>
+							<div>
+								<a href="{% url 'signup' %} " class="btntwo" >REGISTER </a>
+        						<a href="{% url 'login' %}"  class="btnone">LOGIN</a>
+							</div>
+					</section>
+				</div>
+			</div>
+        </main>
+</header>
+</form>
+</body>
+</html>

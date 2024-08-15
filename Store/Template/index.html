@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head><title>BOOKIE</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="/static/Css/index.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        {% if messages %}
+        <div class="alert-container">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <form action="{% url 'home' %}" method="post"> 
+        {% csrf_token %}
+        <header> 
+            <nav>
+                <div class="logo"><strong><h1 class="animated infinite bounce tada">BOOKIE</h1></strong></div> 
+                <div>
+                    <div class="navbar">
+                        <a href="{% url 'home' %}" > HOME </a>
+                        <a href="{% url 'books' %}" >BOOKS</a>
+                        <a href="{% url 'cart' %}" target="_blank">CART</a>
+                        <a href="{% url 'order' %}" >ORDER</a>
+                        <a href="{% url 'joinus' %}">JOINUS </a>
+                    </div>
+                </div>
+            </nav>
+            <main>
+                <section>
+                    <h1>SHOP HERE <span class="change_content"></span></h1><br>
+                    <h3><p>"Everything you ever asked for we take care of it!!"</p></h3>
+                </section>
+            </main>
+        </header>
+    </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/checkout.css' %}"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Bookie</h1>
+            </div>
+            <div class="menu">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'cart' %}">Cart</a>
+                <a href="{% url 'order' %}">Order</a>
+                <a href="{% url 'signout' %}">Sign Out</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Checkout</h2>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="order-item">
+                    <span>Book Title 1</span>
+                    <span>$10.00</span>
+                </div>
+                <div class="order-item">
+                    <span>Book Title 2</span>
+                    <span>$15.00</span>
+                </div>
+                <div class="order-total">
+                    <strong>Total:</strong>
+                    <strong>$25.00</strong>
+                </div>
+            </div>
+
+            <div class="payment-form">
+                <h3>Payment Information</h3>
+                <form action="#" method="post">
+                    <input type="text" name="card_name" placeholder="Name on Card" required>
+                    <input type="text" name="card_number" placeholder="Card Number" required>
+                    <input type="text" name="expiry_date" placeholder="Expiry Date (MM/YY)" required>
+                    <input type="text" name="cvv" placeholder="CVV" required>
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

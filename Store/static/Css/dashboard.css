@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgba(1, 51, 47, 0.99), rgba(18, 177, 150, 0.726));
+  background-size: cover;
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #013b30;;
+  color: #e6eceb;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #00b894;
+  padding-left: 20px;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #013b30;
+  color: white;
+  text-align: center;
+  border-bottom: 2px solid #00b894;
+}
+
+#books {
+  padding: 20px;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #013b30;
+  border: 1px solid #f0eded;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  position: relative;
+}
+
+.book-card img {
+  width: 100%;
+  height: 350px; 
+  
+  border-bottom: 1px solid #f0eded;
+}
+
+.book-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #00b894;
+}
+
+.book-card p {
+  margin: 5px 0;
+  color: white;
+}
+
+.book-card .actions {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.book-card .actions a,
+.book-card .actions button {
+  background-color: #00b894;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-card .actions a:hover,
+.book-card .actions button:hover {
+  background-color: #019a74;
+}

@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKIE</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/books.css' %}">
+ 
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><h1 class="animated infinite bounce tada">BOOKIE</h1></div> 
+            <div class="navbar">
+                <a href="{% url 'home' %}">HOME</a>
+                <a href="{% url 'books' %}">BOOKS</a>
+                <a href="{% url 'cart' %}">CART</a>
+                <a href="{% url 'order' %}">ORDER</a>
+                <a href="{% url 'joinus' %}">JOIN US</a>
+            </div>
+        </nav>
+        <main class="container">
+            <h1>Books Available</h1>
+            <div class="book-container">
+                <div class="book-card">
+                    <img src="{% static 'img/book1.jpeg' %}" alt="Book 1">
+                    <h3>Sapiens</h3>
+                    <p>Author: Yuval Noah Harari</p>
+                    <p>Price: ₹500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+					<button class="view-details">Book Details</button>
+                </div>
+                <div class="book-card">
+                    <img src="{% static 'img/book2.jpeg' %}" alt="Book 2">
+                    <h3>Atomic Habits</h3>
+                    <p>Author: James Clear </p>
+                    <p>Price: ₹550</p>
+                    <button class="add-to-cart">Add to Cart</button>
+					<button class="view-details">Book Details</button>
+                </div>
+                <div class="book-card">
+                    <img src="{% static 'img/book3.jpeg' %}" alt="Book 2">
+                    <h3>Freakanomics </h3>
+                    <p>Author: Steven Levitt, Stephen J. Dubner </p>
+                    <p>Price: ₹1500</p>
+                    <button class="add-to-cart">Add to Cart</button>
+					<button class="view-details">Book Details</button>
+                </div>
+				<div class="book-card">
+                    <img src="{% static 'img/book4.jpeg' %}" alt="Book2">
+                    <h3>Pschology Of Money</h3>
+                    <p>Author: Morgan</p>
+                    <p>Price: ₹700</p>
+                    <button class="add-to-cart">Add to Cart</button>
+					<button class="view-details">Book Details</button>
+                </div>
+				<div class="book-card">
+                    <img src="{% static 'img/book5.jpeg' %}" alt="Book 2">
+                    <h3>Deep Work </h3>
+                    <p>Author: Cal Newport</p>
+                    <p>Price: ₹600</p>
+                    <button class="add-to-cart">Add to Cart</button>
+					<button class="view-details">Book Details</button>
+                </div>
+				<div class="book-card">
+                    <img src="{% static 'img/book6.jpeg' %}" alt="Book 2">
+                    <h3>Good Economics for Hard Times</h3>
+                    <p>Author: Esther and Abhijit</p>
+                    <p>Price: ₹1500</p>
+					<section>
+                    <button class="add-to-cart">Add to Cart</button>
+					<button class="view-details">Book Details</button>
+					</section>
+                </div>
+               
+                
+			
+            </div>
+        </main>
+    </header>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/order.css' %}">    
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="order-container">
+        <h1>Your Orders!</h1>
+    
+        <div class="order-summary">
+            <h2>Order Details</h2>
+            <div class="order-details">
+    
+                <div class="order-item">
+                    <img src="{% static 'img/book11.jpeg' %}" alt="Book Image">
+                    <div class="order-item-details">
+                        <h3>Zero To One</h3>
+                        <p>Author: Peter Theil</p>
+                        <p>Price: ₹ 200</p>
+                        <p>Quantity: 2</p>
+                        <p>Total: ₹ 400 </p>
+                    </div>
+                </div>
+    
+                <!-- Repeat for additional items -->
+    
+            </div>
+            <p><strong>Subtotal: ₹ 400</strong></p>
+            <p><strong>Shipping: ₹5.00</strong></p>
+            <p><strong>Grand Total: ₹ 405 </strong></p>
+        </div>
+    
+        <a href="{% url 'books' %}" class="back-to-shop">BACK</a>
+    </div>
+    
+</body>
+</html>

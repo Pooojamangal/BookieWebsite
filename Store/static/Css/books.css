@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.99),rgba(0,0,0,0.1)), url('../img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: black;  
+   
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+nav .logo {
+    font-family: 'Pacifico', cursive;
+    color: #00b894;
+  }
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #57deb8;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.container h1 {
+    color: #00b894;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.book-card {
+    background-color: #013b30;
+    border: 1px solid #f0eded;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+}
+
+.book-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.book-card p {
+    margin: 5px 0;
+    color: white;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #019a74;
+}
+
+.view-details {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-details:hover {
+    background-color: #019a74;
+}

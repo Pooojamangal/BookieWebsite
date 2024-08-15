@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/static/Css/editbook.css">
+</head>
+<body>
+    <div class="wrap">
+        <h1>Update A Book</h1>
+            <section>
+                <form method="post" action="{% url 'edit' book.id %}"  enctype="multipart/form-data">
+                    {% csrf_token %}
+                        <div class="container">
+                            <input type="text" id="title" name="title" value="{{ book.title }}" placeholder="Enter Book Title" required>
+                            <br>
+                            <input type="text" id="author" name="author" value="{{ book.author }}" placeholder="Enter Book Author" required>
+                            <br>
+                            <input type="number" id="price" name="price" step="0.01" value="{{ book.price }}" placeholder="Enter Book Price">
+                            <br>
+                            <input type="file" id="image" name="image" accept="image/*">
+                            {% if book.image %}
+                                <img src="{{ book.image.url }}" alt="{{ book.title }}" width="100">
+                            {% endif %}
+                        
+                            <button type="submit">Save Changes</button>
+                        </div>
+                </form>
+            </section>
+    </div>
+</body>
+</html>
